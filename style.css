@@ -1,0 +1,158 @@
+/* --- VARIABLES DE COLORES Y FUENTES --- */
+:root {
+    --color-fondo: #F8F9FA;
+    --color-texto: #212529;
+    --color-primario: #007BFF;
+    --color-secundario: #FFFFFF;
+    --fuente-principal: 'Roboto', sans-serif;
+}
+
+/* --- ESTILOS GENERALES --- */
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1.6;
+}
+
+h2, h3 {
+    color: var(--color-primario);
+}
+
+/* --- ENCABEZADO Y PERFIL --- */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: var(--color-secundario);
+    padding: 50px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.texto-container {
+    text-align: left;
+}
+
+.nombre-profesional {
+    margin: 0;
+    color: var(--color-primario);
+    font-size: 2.8em;
+    font-weight: 700;
+}
+
+.titulos-profesionales {
+    margin: 5px 0 0 0;
+    color: var(--color-texto);
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+.foto-perfil {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--color-primario);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- SECCIÓN DE VIDEO --- */
+.seccion-video {
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.video-presentacion {
+    max-width: 100%;
+    width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* --- GALERÍA Y ANIMACIONES --- */
+.galeria-proyectos {
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.tarjeta-proyecto {
+    background-color: var(--color-secundario);
+    padding: 25px;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.tarjeta-proyecto {
+    background-color: var(--color-secundario);
+    padding: 25px;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+}
+
+.btn-enlace {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enlace:hover {
+    background-color: #0056b3;
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 30px;
+    font-size: 0.9em;
+}
+
+/* --- DISEÑO RESPONSIVO (Celulares y Tablets) --- */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .texto-container {
+        text-align: center;
+    }
+    
+    .nombre-profesional {
+        font-size: 2.2em;
+    }
+}
